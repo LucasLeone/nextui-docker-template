@@ -1,8 +1,6 @@
 # Next.js & NextUI Template
 
-This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
-
-[Try it on CodeSandbox](https://githubbox.com/nextui-org/next-app-template)
+This is a template for creating applications using Next.js 14 (app directory), NextUI (v2) and Docker (with Docker Compose).
 
 ## Technologies Used
 
@@ -10,9 +8,10 @@ This is a template for creating applications using Next.js 14 (app directory) an
 - [NextUI v2](https://nextui.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [next-themes](https://github.com/pacocoursey/next-themes)
+- [Docker](https://www.docker.com)
+- [Docker Compose](https://docs.docker.com/compose/)
 
 ## How to Use
 
@@ -21,32 +20,22 @@ This is a template for creating applications using Next.js 14 (app directory) an
 To create a new project based on this template using `create-next-app`, run the following command:
 
 ```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
+npx create-next-app -e https://github.com/LucasLeone/nextui-docker-template
 ```
 
-### Install dependencies
+### Build and start the project
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
-
-```bash
-npm install
+You have to run this command for build the docker image:
+```
+docker compose -f docker-compose.yml build
 ```
 
-### Run the development server
-
-```bash
-npm run dev
+and then you have to up the container:
+```
+docker compose -f docker-compose.yml up
 ```
 
-### Setup pnpm (optional)
-
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@nextui-org/*
-```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
+The NextApp is now in localhost:3000/
 
 ## License
 
