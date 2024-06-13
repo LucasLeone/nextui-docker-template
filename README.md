@@ -20,7 +20,7 @@ This is a template for creating applications using Next.js 14 (app directory), N
 To create a new project based on this template using `create-next-app`, run the following command:
 
 ```bash
-npx create-next-app -e https://github.com/LucasLeone/nextui-docker-template
+npx create-next-app -e https://github.com/LucasLeone/nextui-docker-template app-name
 ```
 
 ### Build and start the project
